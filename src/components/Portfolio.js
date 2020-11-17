@@ -10,6 +10,9 @@ const useStyles = makeStyles(themes => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [themes.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    }
   }
 }))
 
@@ -17,7 +20,7 @@ export default function Portfolio() {
   const classes = useStyles();
   const checked = useWindowPosition('header');
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="portfolio">
       <ProjectCard checked={checked}/>
       <ProjectCard checked={checked}/>
     </div>

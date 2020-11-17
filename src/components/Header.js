@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, IconButton, Collapse } from '@material-ui/core';
 import SortIcon from '@material-ui/icons/Sort'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { Link as Scroll } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -58,9 +59,11 @@ export default function Nav() {
       <Collapse in={checked} style={{ transformOrigin: '0 0 0' }} {...(checked ? { timeout: 1000 } : {})}>
         <div className={classes.titleContainer}>
           <h1 className={classes.title}>Welcome Longer Title</h1>
-          <IconButton>
-            <ExpandMoreIcon className={classes.goDown}/>
-          </IconButton>
+          <Scroll to="portfolio" smooth={true}>
+            <IconButton>
+              <ExpandMoreIcon className={classes.goDown}/>
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>

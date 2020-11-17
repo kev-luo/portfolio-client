@@ -2,10 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 
-import Nav from './Nav';
+import Header from './Header';
 import Portfolio from './Portfolio';
 
-const useStyles = makeStyles(them => ({
+const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '100vh',
     backgroundImage: `url(${process.env.PUBLIC_URL + '/background_.jpg'})`,
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Nav />
+      <Header />
       <Portfolio />
     </div>
   )
