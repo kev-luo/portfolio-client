@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 
 import Nav from './Nav';
+import Portfolio from './Portfolio';
 
 const useStyles = makeStyles(them => ({
   root: {
@@ -19,6 +20,7 @@ export default function Home() {
     <div className={classes.root}>
       <CssBaseline />
       <Nav />
+      <Portfolio />
     </div>
   )
 }
