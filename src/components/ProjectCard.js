@@ -6,6 +6,7 @@ import {
   Typography,
   CardActions,
   IconButton,
+  Collapse
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from '@material-ui/icons/GitHub'
@@ -13,7 +14,8 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 const useStyles = makeStyles((themes) => ({
   root: {
     maxWidth: 550,
-    background: "rgba(0,0,0,0.5)"
+    background: "rgba(0,0,0,0.5)",
+    margin: '1rem',
   },
   media: {
     height: 350,
@@ -35,10 +37,10 @@ const useStyles = makeStyles((themes) => ({
   }
 }));
 
-export default function Project() {
+export default function Project({checked}) {
   const classes = useStyles();
   return (
-    <div>
+    <Collapse in={checked} style={{ transformOrigin: '0 0 0'}} {...(checked ? { timeout: 700 } : {})}>
       <Card className={classes.root} raised>
         <CardMedia
           className={classes.media}
@@ -70,6 +72,6 @@ export default function Project() {
           </IconButton>
         </CardActions>
       </Card>
-    </div>
+    </Collapse>
   );
 }
