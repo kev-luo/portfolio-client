@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Container } from '@material-ui/core';
+import { Typography, Grid, Container, Divider } from '@material-ui/core';
 import { blue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(themes => ({
@@ -25,18 +25,33 @@ export default function About() {
   const classes = useStyles();
   return (
     <Container id="about" className={classes.root}>
-      <Grid container spacing={2}>
-        <Grid item>
-          Hello
-        </Grid>
-        <Grid item lg={6}>
+      <Grid container spacing={9} justify="center" alignItems="center">
 
+        <Grid item lg={8} container direction="column" justify="space-between">
+          <Grid item>
+            <Typography variant="h4">
+              About Me
+            </Typography>
+            <br /><Divider variant="middle" /><br />
+          </Grid>
+          <Grid item>
+            <Typography>
+              A little about my background... I grew up in Austin, TX and went to college at Case Western Reserve University in Cleveland, OH, where i received a BS and Master's in Accountancy. I transitioned to a full-time role at a forensic-accounting firm, Meaden & Moore, where i worked for two and a half years. Through the daily use of Excel formulas and a little VBA, I gained an interest for coding. In my spare time I enjoy playing soccer, reading, and cycling.
+            </Typography>
+          </Grid>
         </Grid>
+
         <Grid item>
-          <div className={classes.imgContainer}>
-            <img src={`${process.env.PUBLIC_URL}/LinkedInPic_head.jpg`} alt="profilepic" className={classes.image}/>
-          </div>
         </Grid>
+
+        <Grid item lg={3} container justify="center">
+          <Grid item>
+            <div className={classes.imgContainer}>
+              <img src={`${process.env.PUBLIC_URL}/LinkedInPic_head.jpg`} alt="profilepic" className={classes.image}/>
+            </div>
+          </Grid>
+        </Grid>
+
       </Grid>
     </Container>
   )
