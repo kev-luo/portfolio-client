@@ -38,9 +38,7 @@ export default function Nav() {
     <AppBar className={classes.appbar} elevation={0}>
       <Toolbar className={classes.toolbar}>
         <Link
-          activeClass={classes.appTitleLink}
           to="home"
-          spy={true}
           smooth={true}
           duration={1000}
           className={classes.appTitleLink}
