@@ -37,41 +37,40 @@ const useStyles = makeStyles((themes) => ({
   }
 }));
 
-export default function Project({checked}) {
+export default function Project() {
   const classes = useStyles();
   return (
-    <Collapse in={checked} style={{ transformOrigin: '0 0 0'}} {...(checked ? { timeout: 700 } : {})}>
-      <Card className={classes.root} raised>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography 
-            gutterBottom 
-            variant="h5" 
-            component="h1"
-            className={classes.title}
-          >
-            Magnificent Larry
-          </Typography>
-          <Typography 
-            variant="body2" 
-            color="textSecondary" 
-            component="p"
-            className={classes.description}
-          >
-            Lizards are a widespread group of squamate reptiles, with over
-            6,000 species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <IconButton size="small" className={classes.icon}>
-            <GitHubIcon />
-          </IconButton>
-        </CardActions>
-      </Card>
-    </Collapse>
+    <Card className={classes.root} raised>
+      <CardMedia
+        className={classes.media}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="Contemplative Reptile"
+      />
+      <CardContent>
+        <Typography 
+          gutterBottom 
+          variant="h5" 
+          component="h1"
+          className={classes.title}
+        >
+          Magnificent Larry
+        </Typography>
+        <Typography 
+          variant="body2" 
+          color="textSecondary" 
+          component="p"
+          className={classes.description}
+        >
+          Lizards are a widespread group of squamate reptiles, with over
+          6,000 species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <IconButton size="small" className={classes.icon}>
+          <GitHubIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
+
   );
 }
