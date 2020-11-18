@@ -35,23 +35,23 @@ export default function Stack() {
   return (
     <>
       <Typography variant="h6" style={{textAlign: 'center'}}>My Stack</Typography>
-        <div className={classes.iconContainer}>
-          <Avatar>
-            <SiMongodb style={{color: 'green'}} size={35}/>
-          </Avatar>
-          <Avatar>
-            <Typography variant="subtitle1" className={classes.exp}>ex</Typography>
-          </Avatar>
-          <Avatar>
-            <SiReact style={{color: '#00FFFF'}} size={35}/>
-          </Avatar>
-          <Avatar>
-            <SiNodeDotJs style={{color: 'green'}} size={35}/>
-          </Avatar>
-          <Avatar>
-            <SiGraphql style={{color: '#FF1493'}} size={35}/>
-          </Avatar>
-        </div>
+      <div className={classes.iconContainer}>
+        <Avatar>
+          <SiMongodb style={{color: 'green'}} size={35}/>
+        </Avatar>
+        <Avatar>
+          <Typography variant="subtitle1" className={classes.exp}>ex</Typography>
+        </Avatar>
+        <Avatar>
+          <SiReact style={{color: '#00FFFF'}} size={35}/>
+        </Avatar>
+        <Avatar>
+          <SiNodeDotJs style={{color: 'green'}} size={35}/>
+        </Avatar>
+        <Avatar>
+          <SiGraphql style={{color: '#FF1493'}} size={35}/>
+        </Avatar>
+      </div>
     </>
   )
 }

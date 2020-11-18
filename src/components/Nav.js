@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     fontsize: '2rem'
   },
   active: {
-    borderBottom: 'solid 1px white',
+    borderBottom: 'solid 1px #B0E0E6',
   }
 }))
 
