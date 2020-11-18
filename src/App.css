@@ -4,3 +4,7 @@
 body {
   font-family: 'Fira Sans', sans-serif
 }
+
+.active {
+  border-bottom: solid 1px white;
+}

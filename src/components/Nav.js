@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Button, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
   icon: {
     color: '#fff',
     fontsize: '2rem'
+  },
+  active: {
+    borderBottom: 'solid 1px white',
   }
 }))
 
@@ -35,7 +38,7 @@ export default function Nav() {
     <AppBar className={classes.appbar} elevation={0}>
       <Toolbar className={classes.toolbar}>
         <Link
-          activeClass="active"
+          activeClass={classes.appTitleLink}
           to="home"
           spy={true}
           smooth={true}
@@ -43,28 +46,28 @@ export default function Nav() {
           className={classes.appTitleLink}
         ><Button color="inherit" className={classes.appTitle}>KEVIN LUO</Button></Link>
         <Link
-          activeClass="active"
+          activeClass={classes.active}
           to="portfolio"
           spy={true}
+          offset={-64}
           smooth={true}
-          offset={-70}
           duration={1000}
         ><Button color="inherit">PORTFOLIO</Button></Link>
         <Link
-          activeClass="active"
+          activeClass={classes.active}
           to="about"
           spy={true}
+          offset={-64}
           smooth={true}
-          offset={-70}
-          duration={500}
+          duration={1000}
         ><Button color="inherit">ABOUT</Button></Link>
         <Link
-          activeClass="active"
+          activeClass={classes.active}
           to="contact"
           spy={true}
+          offset={-64}
           smooth={true}
-          offset={-70}
-          duration={500}
+          duration={1000}
         ><Button color="inherit">CONTACT</Button></Link>
 
       </Toolbar>

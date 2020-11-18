@@ -13,21 +13,21 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 const useStyles = makeStyles((themes) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 300,
     background: "rgba(0,0,0,0.5)",
     margin: '1rem',
   },
   media: {
-    height: 250,
+    height: 150,
   },
   title: {
-    fontSize: "2rem",
+    fontSize: "1.2rem",
     fontWeight: "bold",
     color: "#fff",
   },
   description: {
     color: "#fff",
-    fontSize: "1.1rem",
+    fontSize: "1rem",
   },
   icon: {
     color: '#fff',

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { IconButton, Collapse } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { Link as Scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,11 +35,11 @@ export default function Nav() {
       <Collapse in={checked} style={{ transformOrigin: '0 0 0' }} {...(checked ? { timeout: 1000 } : {})}>
         <div className={classes.titleContainer}>
           <h1 className={classes.title}>Welcome Longer Title</h1>
-          <Scroll to="portfolio" smooth={true}>
+          <Link to="portfolio" smooth={true} offset={-64}>
             <IconButton>
               <ExpandMoreIcon className={classes.goDown}/>
             </IconButton>
-          </Scroll>
+          </Link>
         </div>
       </Collapse>
     </div>
