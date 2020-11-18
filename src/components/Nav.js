@@ -37,8 +37,12 @@ export default function Nav() {
         <Scroll to="portfolio" smooth={true} >
           <Button color="inherit">PORTFOLIO</Button>
         </Scroll>
-        <Button color="inherit">ABOUT</Button>
-        <Button color="inherit">CONTACT</Button>
+        <Scroll to="about" smooth={true} >
+          <Button color="inherit">ABOUT</Button>
+        </Scroll>
+        <Scroll to="contact" smooth={true}>
+          <Button color="inherit">CONTACT</Button>
+        </Scroll>
       </Toolbar>
     </AppBar>
   )

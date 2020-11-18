@@ -5,6 +5,8 @@ import { CssBaseline } from '@material-ui/core';
 import Header from './Header';
 import Portfolio from './Portfolio';
 import Nav from './Nav';
+import About from './About';
+import Contact from './Contact';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,6 +25,8 @@ export default function Home() {
       <Nav />
       <Header />
       <Portfolio />
+      <About />
+      <Contact />
     </div>
   )
 }

@@ -13,12 +13,12 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 const useStyles = makeStyles((themes) => ({
   root: {
-    maxWidth: 550,
+    maxWidth: 400,
     background: "rgba(0,0,0,0.5)",
     margin: '1rem',
   },
   media: {
-    height: 350,
+    height: 250,
   },
   title: {
     fontSize: "2rem",

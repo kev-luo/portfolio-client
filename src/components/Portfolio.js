@@ -12,7 +12,8 @@ const useStyles = makeStyles(themes => ({
     [themes.breakpoints.down('md')]: {
       flexDirection: 'column',
     },
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    minHeight: '100vh'
   }
 }))
 
