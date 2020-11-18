@@ -10,7 +10,7 @@ const useStyles = makeStyles(themes => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    [themes.breakpoints.down('md')]: {
+    [themes.breakpoints.down('xs')]: {
       flexDirection: 'column',
     },
     flexWrap: 'wrap',
@@ -23,36 +23,36 @@ export default function Portfolio() {
   const checked = useWindowPosition('header');
   return (
     // <div className={classes.root} id="portfolio">
-    <Container>
-    <Grid wrap container spacing={0} direction="row" id="portfolio" justify="center" >
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+    <Container id="portfolio" >
+    <Grid wrap container spacing={0} justify="center" >
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
-        <Grid item sm={6} md={6} lg={3} xs={12}>
+        <Grid item lg={3} >
           <ProjectCard checked={checked}/>
         </Grid>
       </Grid>
