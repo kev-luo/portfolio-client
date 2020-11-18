@@ -4,10 +4,11 @@ import { CssBaseline } from '@material-ui/core';
 
 import Header from './Header';
 import Portfolio from './Portfolio';
+import Nav from './Nav';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: '100vh',
+    height: '100vh',
     backgroundImage: `url(${process.env.PUBLIC_URL + '/background_.jpg'})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+      <Nav />
       <Header />
       <Portfolio />
     </div>

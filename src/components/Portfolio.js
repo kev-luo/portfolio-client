@@ -6,13 +6,13 @@ import useWindowPosition from '../hooks/useWindowPosition';
 
 const useStyles = makeStyles(themes => ({
   root: {
-    minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     [themes.breakpoints.down('md')]: {
       flexDirection: 'column',
-    }
+    },
+    flexWrap: 'wrap'
   }
 }))
 
@@ -21,6 +21,13 @@ export default function Portfolio() {
   const checked = useWindowPosition('header');
   return (
     <div className={classes.root} id="portfolio">
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
+      <ProjectCard checked={checked}/>
       <ProjectCard checked={checked}/>
       <ProjectCard checked={checked}/>
     </div>
