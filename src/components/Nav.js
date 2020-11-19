@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   appbar: {
-    background: "black",
+    background: "#17141d",
   },
   toolbar: {
     width: "80%",

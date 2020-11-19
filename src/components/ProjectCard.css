@@ -34,7 +34,6 @@
 .portfolioCard:hover {
 transform: translateY(-20px);
 transition: 0.4s ease-out;
-cursor: pointer;
 }
 
 .title {
