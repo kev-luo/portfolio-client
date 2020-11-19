@@ -3,6 +3,7 @@ import {
   Card,
   CardMedia,
   CardContent,
+  Link,
   Typography,
   CardActions,
   IconButton,
@@ -31,7 +32,7 @@ const useStyles = makeStyles((themes) => ({
   icon: {
     color: "#fff",
     "&:hover": {
-      color: "#888",
+      color: "#B0E0E6",
     },
   },
 }));
@@ -65,9 +66,12 @@ export default function Project({ deployed, description, id, name, repo, skills 
         </Typography>
       </CardContent>
       <CardActions>
-        <IconButton size="small" className={classes.icon}>
-          <GitHubIcon />
+        <IconButton size="small">
+          <a href={repo} target="_blank"><GitHubIcon className={classes.icon}/></a>
         </IconButton>
+        <Link color="primary" target="_blank" href={deployed} rel="noopener">
+          Deployed Site
+        </Link>
       </CardActions>
     </Card>
   );

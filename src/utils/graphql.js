@@ -16,3 +16,21 @@ export const FETCH_PROJECTS_QUERY = gql`
   }
 }
 `
+
+export const CREATE_MESSAGE = gql`
+  mutation createMessage(
+    $name: String!
+    $email: String!
+    $body: String!
+  ) {
+    createMessage(
+      name: $name
+      email: $email
+      body: $body
+    ) {
+      name
+      email
+      body
+    }
+  }
+`
