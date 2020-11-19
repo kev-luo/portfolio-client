@@ -7,6 +7,10 @@ const useStyles = makeStyles((themes) => ({
     marginTop: themes.spacing(5),
     minHeight: "100vh",
   },
+  about: {
+    transform: "translateY(60px)",
+    padding: themes.spacing(2),
+  },
   imgContainer: {
     background: "#B0E0E6",
     padding: "0px",
@@ -24,7 +28,7 @@ export default function About() {
   const classes = useStyles();
   return (
     <Container id="about" className={classes.root}>
-      <Grid container spacing={9} justify="center" alignItems="center">
+      <Grid className={classes.about} container spacing={9} justify="center" alignItems="center">
         <Grid item lg={8} container direction="column" justify="space-between">
           <Grid item>
             <Typography variant="h4">About Me</Typography>

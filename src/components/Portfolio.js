@@ -13,11 +13,11 @@ export default function Portfolio() {
   return (
     <Container id="portfolio">
       <Stack />
-      <Grid wrap container spacing={2} justify="center">
+      <Grid wrap container spacing={2} justify="center" style={{marginTop: 20}}>
         {loading || (
           data.getProjects.map(project => {
             return (
-              <Grid item lg={4} key={project.id}>
+              <Grid item lg={3} key={project.id}>
                 <ProjectCard {...project}/>
               </Grid>
             )

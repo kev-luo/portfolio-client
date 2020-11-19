@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
 import clsx from "clsx";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
@@ -8,10 +8,11 @@ import {
   Paper,
   Typography,
   Button,
+  Snackbar,
 } from "@material-ui/core";
 
-import { useForm } from '../hooks/useForm';
-import { CREATE_MESSAGE } from '../utils/graphql';
+import { useForm } from "../hooks/useForm";
+import { CREATE_MESSAGE } from "../utils/graphql";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,14 @@ const useStyles = makeStyles((theme) => ({
     transform: "translateY(40px)",
     padding: theme.spacing(2),
   },
+  submit: {
+    background: '#314786',
+    color: 'white',
+    '&:hover': {
+      background: '#B0E0E6',
+      color: 'white'
+    }
+  }
 }));
 
 const CssTextField = withStyles({
@@ -62,23 +71,28 @@ export default function Contact() {
   const classes = useStyles();
   const [errors, setErrors] = useState({});
   const initialState = {
-    name:'',
-    email:'',
-    body:'',
-  }
-  const { onChange, onSubmit, values, setValues } = useForm(createMessageCb, initialState);
+    name: "",
+    email: "",
+    body: "",
+  };
+  const [open, setOpen] = useState(false);
+  const { onChange, onSubmit, values, setValues } = useForm(
+    createMessageCb,
+    initialState
+  );
 
   const [createMessage] = useMutation(CREATE_MESSAGE, {
     variables: values,
     onError(err) {
-      setErrors(err.graphQLErrors[0].extensions.exception.errors)
+      setErrors(err.graphQLErrors[0].extensions.exception.errors);
     },
     update() {
-      setValues(initialState)
-      setErrors({})
-    }
-  })
-  
+      setValues(initialState);
+      setErrors({});
+      setOpen(true);
+    },
+  });
+
   function createMessageCb() {
     createMessage();
   }
@@ -121,9 +135,18 @@ export default function Contact() {
             className={classes.margin}
             fullWidth
           />
-          <Button type="submit" className={classes.margin}>Send</Button>
+          <Button type="submit" className={clsx(classes.margin, classes.submit)}>
+            Send
+          </Button>
         </form>
       </Paper>
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        open={open}
+        onClose={() => setOpen(false)}
+        autoHideDuration={6000}
+        bodyStyle={{backgroundColor: 'green'}}
+      />
     </Container>
   );
 }
