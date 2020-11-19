@@ -145,7 +145,7 @@ export default function Contact() {
         open={open}
         onClose={() => setOpen(false)}
         autoHideDuration={6000}
-        bodyStyle={{backgroundColor: 'green'}}
+        message="Thanks for the message!"
       />
     </Container>
   );
