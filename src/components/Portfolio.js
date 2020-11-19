@@ -1,45 +1,45 @@
-import React from 'react';
-import { Grid, Container } from '@material-ui/core';
+import React from "react";
+import { Grid, Container } from "@material-ui/core";
 
-import Stack from './Stack';
-import ProjectCard from './ProjectCard';
+import Stack from "./Stack";
+import ProjectCard from "./ProjectCard";
 
 export default function Portfolio() {
   return (
-    <Container id="portfolio" >
+    <Container id="portfolio">
       <Stack />
-      <Grid wrap container spacing={0} justify="center" >
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
-          <Grid item lg={3} >
-            <ProjectCard />
-          </Grid>
+      <Grid wrap container spacing={0} justify="center">
+        <Grid item lg={3}>
+          <ProjectCard />
         </Grid>
-      </Container>
-  )
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+        <Grid item lg={3}>
+          <ProjectCard />
+        </Grid>
+      </Grid>
+    </Container>
+  );
 }

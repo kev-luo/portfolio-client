@@ -1,36 +1,36 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { Link } from 'react-scroll';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { AppBar, Toolbar, Button } from "@material-ui/core";
+import { Link } from "react-scroll";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   appbar: {
-    background: 'black',
+    background: "black",
   },
   toolbar: {
-    width: '80%',
-    margin: '0 auto',
+    width: "80%",
+    margin: "0 auto",
   },
   appTitleLink: {
     flexGrow: 1,
   },
   appTitle: {
     fontWeight: 500,
-    fontSize: '1.2rem'
+    fontSize: "1.2rem",
   },
   icon: {
-    color: '#fff',
-    fontsize: '2rem'
+    color: "#fff",
+    fontsize: "2rem",
   },
   active: {
-    borderBottom: 'solid 1px #B0E0E6',
-  }
-}))
+    borderBottom: "solid 1px #B0E0E6",
+  },
+}));
 
 export default function Nav() {
   const classes = useStyles();
@@ -42,7 +42,11 @@ export default function Nav() {
           smooth={true}
           duration={1000}
           className={classes.appTitleLink}
-        ><Button color="inherit" className={classes.appTitle}>KEVIN LUO</Button></Link>
+        >
+          <Button color="inherit" className={classes.appTitle}>
+            KEVIN LUO
+          </Button>
+        </Link>
         <Link
           activeClass={classes.active}
           to="portfolio"
@@ -50,7 +54,9 @@ export default function Nav() {
           offset={-64}
           smooth={true}
           duration={1000}
-        ><Button color="inherit">PORTFOLIO</Button></Link>
+        >
+          <Button color="inherit">PORTFOLIO</Button>
+        </Link>
         <Link
           activeClass={classes.active}
           to="about"
@@ -58,7 +64,9 @@ export default function Nav() {
           offset={-64}
           smooth={true}
           duration={1000}
-        ><Button color="inherit">ABOUT</Button></Link>
+        >
+          <Button color="inherit">ABOUT</Button>
+        </Link>
         <Link
           activeClass={classes.active}
           to="contact"
@@ -66,9 +74,10 @@ export default function Nav() {
           offset={-64}
           smooth={true}
           duration={1000}
-        ><Button color="inherit">CONTACT</Button></Link>
-
+        >
+          <Button color="inherit">CONTACT</Button>
+        </Link>
       </Toolbar>
     </AppBar>
-  )
+  );
 }
