@@ -4,6 +4,8 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kev-luo/portfolio-client)
 
 ## Description
+[Deployed Link](https://admiring-saha-7edd42.netlify.app/)
+
 An updated portfolio site built with create-react-app. I've stored all my projects on MongoDB, with the data being queried using GraphQL. The front-end state is managed using Apollo Client. This repo will be continuously updated to reflect my most current work/projects.
 
 ## Table of Contents
