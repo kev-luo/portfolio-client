@@ -2,7 +2,7 @@ import App from '../App';
 import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:5000/'
+  uri: 'https://portfolio-kl.herokuapp.com/'
 })
 
 const client = new ApolloClient({
