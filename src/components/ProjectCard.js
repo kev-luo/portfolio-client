@@ -12,12 +12,12 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((themes) => ({
   root: {
-    maxWidth: 300,
+    width: 400,
     background: "rgba(0,0,0,0.5)",
     margin: "1rem",
   },
   media: {
-    height: 150,
+    height: 200,
   },
   title: {
     fontSize: "1.2rem",
@@ -36,8 +36,9 @@ const useStyles = makeStyles((themes) => ({
   },
 }));
 
-export default function Project() {
+export default function Project({ deployed, description, id, name, repo, skills }) {
   const classes = useStyles();
+
   return (
     <Card className={classes.root} raised>
       <CardMedia
@@ -52,7 +53,7 @@ export default function Project() {
           component="h1"
           className={classes.title}
         >
-          Magnificent Larry
+          {name}
         </Typography>
         <Typography
           variant="body2"
@@ -60,8 +61,7 @@ export default function Project() {
           component="p"
           className={classes.description}
         >
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
