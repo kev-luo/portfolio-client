@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Grid, Container, Divider } from "@material-ui/core";
+import { Typography, Grid, Container, Divider, IconButton } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((themes) => ({
   root: {
@@ -22,13 +24,31 @@ const useStyles = makeStyles((themes) => ({
     transform: "translate(-15px, 17px)",
     boxShadow: "11px -9px 5px -6px rgba(0,0,0,0.75)",
   },
+  icon: {
+    '&:hover': {
+      backgroundColor: 'transparent',
+    }
+  },
+  linkedin: {
+    color: '#2867B2',
+    "&:hover": {
+      color: "#B0E0E6",
+    },
+  },
+  github: {
+    color: 'black',
+    width: '27px',
+    "&:hover": {
+      color: "#B0E0E6",
+    },
+  },
 }));
 
 export default function About() {
   const classes = useStyles();
   return (
     <Container id="about" className={classes.root}>
-      <Grid className={classes.about} container spacing={9} justify="center" alignItems="center">
+      <Grid className={classes.about} container spacing={2} justify="center" alignItems="center">
         <Grid item lg={8} container direction="column" justify="space-between">
           <Grid item>
             <Typography variant="h4">About Me</Typography>
@@ -47,9 +67,17 @@ export default function About() {
               In my spare time I enjoy playing soccer, reading, and cycling.
             </Typography>
           </Grid>
+          <Grid item>
+          <IconButton className={classes.icon}>
+            <a href="https://github.com/kev-luo" target="_blank" rel="noreferrer"><GitHubIcon className={classes.github} fontSize="large"/></a>
+          </IconButton>
+          <IconButton className={classes.icon}>
+            <a href="https://www.linkedin.com/in/kevinluo49/" target="_blank" rel="noreferrer"><LinkedInIcon className={classes.linkedin} fontSize="large"/></a>
+          </IconButton>
+          </Grid>
         </Grid>
 
-        <Grid item></Grid>
+        <Grid item lg={1}></Grid>
 
         <Grid item lg={3} container justify="center">
           <Grid item>
