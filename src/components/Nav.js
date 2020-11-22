@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appTitle: {
-    fontWeight: 500,
     fontSize: "1.4rem",
     fontWeight: 300,
   },
