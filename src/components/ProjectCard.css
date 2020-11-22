@@ -6,6 +6,7 @@
   left: 0px;
   padding-right: 2rem;
   perspective: 1000px;
+  font-family: Fira Sans, sans-serif;
 }
 .portfolioCard h3 {
   color:#bebcc4;
@@ -27,9 +28,6 @@
   color:#bebcc4;
   padding-top: 1rem;
   padding-left: 1rem;
-}
-.portfolioCard:not(:first-child) {
-  margin-left: -30px;
 }
 .portfolioCard:hover {
 transform: translateY(-20px);

@@ -17,6 +17,9 @@ import { CREATE_MESSAGE } from "../utils/graphql";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
+    '& * ': {
+      fontFamily: 'Fira Sans, sans-serif'
+    }
   },
   form: {
     display: "flex",

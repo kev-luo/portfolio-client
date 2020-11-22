@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "#fff",
     fontSize: "3rem",
+    fontFamily: 'Fira Sans, sans-serif'
   },
   goDown: {
     color: "#fff",

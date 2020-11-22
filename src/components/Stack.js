@@ -4,15 +4,9 @@ import { Avatar, Typography } from "@material-ui/core";
 import { SiReact, SiNodeDotJs, SiMongodb, SiGraphql } from "react-icons/si";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column",
-    },
-    flexWrap: "wrap",
-    minHeight: "100vh",
+  title: {
+    fontFamily: 'Fira Sans, sans-serif',
+    fontWeight: 400
   },
   iconContainer: {
     display: "flex",
@@ -34,7 +28,7 @@ export default function Stack() {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h6" style={{ textAlign: "center" }}>
+      <Typography className={classes.title} variant="h6" style={{ textAlign: "center" }}>
         My Stack
       </Typography>
       <div className={classes.iconContainer}>

@@ -8,6 +8,9 @@ const useStyles = makeStyles((themes) => ({
   root: {
     marginTop: themes.spacing(5),
     minHeight: "100vh",
+    '& *': {
+      fontFamily: 'Fira Sans, sans-serif'
+    }
   },
   about: {
     transform: "translateY(60px)",

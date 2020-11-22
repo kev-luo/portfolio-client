@@ -4,24 +4,23 @@ import { AppBar, Toolbar, Button } from "@material-ui/core";
 import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   appbar: {
     background: "#17141d",
   },
   toolbar: {
     width: "80%",
     margin: "0 auto",
+    '& button': {
+      fontFamily: 'Fira Sans, sans-serif',
+    }
   },
   appTitleLink: {
     flexGrow: 1,
   },
   appTitle: {
     fontWeight: 500,
-    fontSize: "1.2rem",
+    fontSize: "1.4rem",
+    fontWeight: 300,
   },
   icon: {
     color: "#fff",
