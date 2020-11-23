@@ -8,6 +8,8 @@
 
 An updated portfolio site built with create-react-app. I've stored all my projects on MongoDB, with the data being queried using GraphQL. The front-end state is managed using Apollo Client. This repo will be continuously updated to reflect my most current work/projects.
 
+![Demo](public/Kevin's%20Portfolio.gif)
+
 ## Table of Contents
 * [License](#License)
 * [Contributing](#Contributing)
