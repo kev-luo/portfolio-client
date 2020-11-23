@@ -12,8 +12,6 @@ An updated portfolio site built with create-react-app. I've stored all my projec
 
 ## Table of Contents
 * [License](#License)
-* [Contributing](#Contributing)
-* [Tests](#Tests)
 * [Questions](#Questions)
 
 ## License
