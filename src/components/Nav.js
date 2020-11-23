@@ -12,6 +12,11 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     '& button': {
       fontFamily: 'Fira Sans, sans-serif',
+      transition: "all 0.3s ease 0s",
+      color: "#edf0f1",
+      "&:hover": {
+        color: "#B0E0E6"
+      }
     }
   },
   appTitleLink: {
